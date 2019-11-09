@@ -1,2 +1,7 @@
 # simulation_datamagic
 基于simpy的排队仿真，数据魔术师之排队仿真源代码
+
+代码目录如图9所示。其中get_simdata.py是仿真数据生成的代码，其数据输入为raw_data文件夹，raw_data文件夹下均是经脱敏处理过的真实的汽车贷款审批处理数据。simulation下的两个文件是仿真模型的文件，主文件是rule_baseline_four.py文件，rule_baseline_four_func.py用于存放主文件函数。执行时先点击get_simdata.py生成仿真数据，再点击rule_baseline_four.py运行仿真模型。Ps：代码由小编一人完成，如有不周到之处还请多多指教。
+
+关于result_data的解释：
+运行后会在result_data文件夹下生成八个df开头的文件，把这八个文件剪切后在result_data下创立一个新的文件夹，命名为data[a,b,c,d],其中abcd（具体数值）依次为四个环节的服务台个数，然后点击config，在里面写入a,b,c,d并保存，最后打开queuevisualization运行即可显示界面
